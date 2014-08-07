@@ -1,0 +1,24 @@
+./bin/txt_main:  ./tmp/init_txt.o ./tmp/delpunct.o ./tmp/upper_to_lower.o ./tmp/txt_main.o ./tmp/delfirstspace.o ./tmp/del_str_select.o ./tmp/count_word.o ./tmp/match_str.o ./tmp/del_entet.o ./tmp/del_mid_space.o ./tmp/save_word.o
+	gcc -o ./bin/txt_main  ./tmp/init_txt.o ./tmp/delpunct.o ./tmp/upper_to_lower.o ./tmp/txt_main.o ./tmp/delfirstspace.o ./tmp/del_str_select.o ./tmp/count_word.o ./tmp/match_str.o ./tmp/del_entet.o ./tmp/del_mid_space.o ./tmp/save_word.o
+./tmp/txt_main.o: ./src/txt_main.c
+	gcc -c ./src/txt_main.c -o ./tmp/txt_main.o -I ./include
+./tmp/init_txt.o: ./src/init_txt.c 
+	gcc -c ./src/init_txt.c  -o ./tmp/init_txt.o -I ./include
+./tmp/upper_to_lower.o: ./src/upper_to_lower.c
+	gcc -c ./src/init_txt.c -o ./tmp/upper_to_lower.o -I ./include
+./tmp/delpunct.o: ./src/delpunct.c
+	gcc -c ./src/delpunct.c -o ./tmp/delpunct -I ./include
+./tmp/delfirstspace.o: ./src/delfirstspace.c
+	gcc -c ./src/delfirstspace.c -o ./tmp/delfirstspace.o -I ./include
+./tmp/del_str_select.o: ./src/del_str_select.c
+	gcc -c ./src/del_str_select.c -o ./tmp/del_str_select.o -I ./include
+./tmp/count_word.o: ./src/count_word.c
+	gcc -c ./src/count_word.c -o ./tmp/count_word.o -I ./include
+./tmp/match_str.o: ./src/match_str.c
+	gcc -c ./src/match_str.c -o ./tmp/match_str.o -I ./include
+./tmp/del_entet.o: ./src/del_entet.c
+	gcc -c ./src/del_entet.c -o ./tmp/del_entet.o -I ./include
+./tmp/del_mid_space.o: ./src/del_mid_space.c
+	gcc -c ./src/del_mid_space.c -o ./tmp/del_mid_space.o -I ./include
+./tmp/save_word.o: ./src/save_word.c
+	gcc -c ./src/save_word.c -o ./tmp/save_word.o  -I ./include
